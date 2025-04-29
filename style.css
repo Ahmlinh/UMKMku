@@ -96,7 +96,6 @@
 
   .hero-image img {
     max-width: 700px;
-    border-radius: 20px;
     position: relative;
   }
 
@@ -546,7 +545,13 @@ color: #4a6c8b;
   }
   
   .slide {
-    max-width: 380px
+    max-width: 380px;
+    margin-left: -20px;
+  }
+
+  .slide.show{
+    max-width: 380px;
+    margin-left: -20px;
   }
 
   .logo img {
@@ -563,16 +568,14 @@ color: #4a6c8b;
   .hero {
     display: flex;
     margin-top: 20px;
-    margin-left: 0;
     max-width: 100%;
     overflow-x: hidden;
-    margin-left: 10px
   }
 
   .hero-image {
     max-width: 380px;
-    margin-left: 0;
-    margin-bottom: 270px;
+    margin-left: -20px;
+    margin-bottom: 260px;
   }
 
   .hero-image img {
@@ -595,9 +598,9 @@ color: #4a6c8b;
   }
 
   .btn-coba {
-    width: 60%;
+    width: 70%;
     padding: 15px 0;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     font-family: "lexend deca",serif;
   }
@@ -622,7 +625,7 @@ color: #4a6c8b;
     width: 400px;
     font-size: 13px;
     margin-top: -180px;
-    transform: translateX(40px);
+    transform: translateX(0px);
   }
 
   .why-container {
@@ -637,8 +640,10 @@ color: #4a6c8b;
   }
 
   .why-image img {
-    width: 235px;
-    transform: translateX(-20px);
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    margin-left: -40px;
   }
 
   .why-text {
@@ -675,11 +680,11 @@ color: #4a6c8b;
   }
 
   .fitur h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .fitur p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .fitur-container {
@@ -691,43 +696,46 @@ color: #4a6c8b;
   }
 
   .fitur-card {
-    max-width: 190px;
+    max-width: 170px;
   }
 
   .fitur-card h3 {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .fitur-card p {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .action {
     display: flex;
-    height: 300px;
+    height: auto;
   }
 
   .action-text {
     padding: 30px;
-    margin-left: -30px;
+    margin-left: -55px;
     width: 100%;
     clip-path: none;
-    height: 300px;
+    height: 200px;
     
   }
 
   .action-text h1 {
     font-size: 20px;
+    margin-left: 20px;
   }
 
   .action-text p {
     font-size: 12px;
+    margin-left: 20px;
+
   }
 
   .shadow {
     display: flex;
     width: 200px;
-    height:300px;
+    height:200px;
     object-fit: cover;
     transform: translateX(90px);
     background: linear-gradient(to right, rgba(33, 196, 100, 0.3), rgb(33, 196, 101));
@@ -738,20 +746,30 @@ color: #4a6c8b;
     display: flex;
     width: 200px;
     background: linear-gradient(to right, rgba(33, 196, 100, 0.4), rgba(33, 196, 100, 1));
-    height:300px;
+    height:200px;
     object-fit: cover;
     transform: translateX(-10px);
   }
 
   .action-text .btn-coba {
-    width: 70%;
-    padding: 15px;
-    font-size: 10px;
+    width: 60%;
+    padding: 12px;
+    font-size: 6px;
+    margin-left: 20px;
+
+  }
+
+  .action-text h1 {
+    font-size: 13px;
+  }
+
+  .action-text p {
+    font-size: 9px;
   }
 
   .image-container img {
     width: 200px;
-    height:300px;
+    height:200px;
     object-fit: cover;
   }
 
@@ -769,21 +787,22 @@ color: #4a6c8b;
   }
 
   .footer-brand {
-    margin-left: 80px;
   }
 
   .footer-brand p {
     font-size: 12px;
     margin-bottom: 20px;
+    margin-left: 20px;
   }
 
   .footer-links{
-    margin-left: 110px;
     font-size: 15px;
+    margin-left: 50px;
   }
 
   .footer-links ul {
     display: flex;
+
   }
 
 }
