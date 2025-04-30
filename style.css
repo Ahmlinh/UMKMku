@@ -560,24 +560,24 @@ color: #4a6c8b;
     height: 600px;
   }
 
-  .slide {
-    width: auto;
-  }
-
-  .slide.show {
-    width: auto;
-  }
-
-  .hero-image {
-    max-width: 350px;
-    width: 100%;
-    
-  }
-
   .hero-image img {
     width: 100%;
 
   }
+    
+  .hero-image img {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  
+  .slide {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 
   .hero-text {
     width: 100%;
