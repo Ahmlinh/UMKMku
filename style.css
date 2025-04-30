@@ -528,15 +528,11 @@ color: #4a6c8b;
 
 /* Responsive untuk layar dengan lebar maksimum 800px */
 @media (max-width: 620px) {
-
-  /* Header */
-
   header {
-    display: flex;
     width: 100%;
-    padding: 15px 15px 10px 0;  
-
-
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
   }
 
   .hidden {
@@ -544,401 +540,268 @@ color: #4a6c8b;
   }
 
   .menuicon {
-    display: flex;
-  }
-  
-  .slide {
-    max-width: 380px;
-    margin-left: -20px;
-  }
-
-  .slide.show{
-    max-width: 380px;
-    margin-left: -20px;
+    display: inline;
   }
 
   .logo img {
-    margin-left: 0;
     transform: scale(1);
-    margin-left: 20px;
-  }
-
-  nav a {
-    font-size: 14px;
-    margin: 8px 10px;
+    margin: 0;
   }
 
   .hero {
-    display: flex;
-    margin-top: 20px;
-    max-width: 100%;
-    overflow-x: hidden;
     width: 100%;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
-  }
-
-  .hero-image {
-    max-width: 380px;
-    margin-bottom: 260px;
-    margin-left: 5%;
-  }
-
-  .hero-image img {
-    max-width: 380px;
-  }
-
-  .hero-text {
-    margin-left: 0;
-    margin-top: 280px;
-    text-align: center;
-    margin-bottom: 0px;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-  .btn-coba {
-    width: 60%;
-    padding: 15px 0;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: "lexend deca",serif;
-  }
-
-  .why-section {
-    padding: 00px 0px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
-    width: 100%;
-  }
-
-  .why-text h2 {
-    font-size: 25px;
-    margin-bottom: 80px;
-  }
-
-  .why-text p {
-    font-size: 10px;
-    display: none;
-  }
-
-  .why-p p {
-    display: flex;
-    width: 500px;
-    font-size: 13px;
-    margin-top: -150px;
-    position: relative;
-  }
-
-  .why-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    max-width: 500px;
-    max-height: 400px;
-    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    height: 600px;
   }
 
-  .slide2 {
+  .slide {
     width: auto;
   }
 
-  .why-image img {
-    width: 230px;
-    height: 180px;
-    object-fit: cover;
-    margin-left: -40px;
+  .slide.show {
+    width: auto;
   }
 
-  .why-text {
-    margin-left: 10px;
-    max-width: 400px;
-    margin-right: 0;
+  .hero-image {
+    max-width: 350px;
+    width: 100%;
+    
   }
 
-  .why-card h3 {
-    font-size: 15px;
+  .hero-image img {
+    width: 100%;
+
   }
 
-  .why-card p {
+  .hero-text {
+    width: 100%;
+    margin: 0;
+    margin-top: 200px;
+  }
+
+  .hero-text h1 {
+    font-size: 20px;
+  }
+
+  .hero-text p {
     font-size: 12px;
   }
 
-  .why-features {
+  .btn-coba {
+    width: 50%;
+    font-size: 11px;
+    font-weight: 700px;
+  }
+
+  .why-section {
+    width: 100%;
     display: flex;
-    margin-top: 30px;
-    gap: 40px;
+    flex-direction: column;
   }
 
-  .why-card {
-    width: 170px;
+  .why-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto; /* tinggi harus ada agar bisa dihitung secara vertikal */
+    align-items: center; /* ini yang menengahkan secara vertikal */
+    justify-content: center; /* jika ingin horizontal juga */
   }
 
-  .why-card img {
-    transform: scale(0.7);
-  }
-
-  .fitur {
-    padding: 50px 10px;
-    margin-top: 100px;
+  .why-image {
+    max-width: 200px;
     width: 100%;
   }
 
-  .fitur h2 {
-    font-size: 25px;
+  .why-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
 
-  .fitur p {
+  .slide2 {
+    max-width: 200px;
+    width: 100%;
+    left: 50%;
+    transform: translatey(-50%);
+  }
+
+  .slide2.show {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .why-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  .why-text p {
+    display: none;
+  }
+
+  .why-text h2 {
+    font-size: 24px;
+    max-width: 170px;
+    line-height: 40px;
+  }
+
+  .why-p p{
+    display: inline;
+    font-size: 11px;
+  }
+
+  .why-p {
+    transform: translateY(-50px);
+  }
+
+  .why-features {
+    gap: 30px;
+  }
+
+  .why-card {
+    width: 100%;
+    max-width: 170px;
+  }
+
+  .why-card p {
+    font-size: 10px;
+  }
+
+  .why-card h3 {
     font-size: 12px;
   }
 
-  .fitur-container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    justify-items: center;
-    padding: 0 20px;
-  }
-
   .fitur-card {
+    width: 100%;
     max-width: 170px;
   }
 
   .fitur-card h3 {
-    font-size: 12px;
+    font-size: 15px;
   }
 
-  .fitur-card p {
+  .fitur-card P {
     font-size: 10px;
   }
 
   .action {
-    display: flex;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
     height: auto;
-    width: 100%;
-  }
-
-  .action-text {
-    padding: 30px;
-    margin-left: -55px;
-    width: 100%;
-    clip-path: none;
-    height: 200px;
-    
-  }
-
-  .action-text h1 {
-    font-size: 20px;
-    margin-left: 20px;
-  }
-
-  .action-text p {
-    font-size: 12px;
-    margin-left: 20px;
-
-  }
-
-  .shadow {
-    display: flex;
-    width: 200px;
-    height:200px;
-    object-fit: cover;
-    transform: translateX(90px);
-    background: linear-gradient(to right, rgba(33, 196, 100, 0.3), rgb(33, 196, 101));
-    opacity: 1;
-  }
-
-  .shadow2{
-    display: flex;
-    width: 200px;
-    background: linear-gradient(to right, rgba(33, 196, 100, 0.4), rgba(33, 196, 100, 1));
-    height:200px;
-    object-fit: cover;
-    transform: translateX(-10px);
-  }
-
-  .action-text .btn-coba {
-    width: 60%;
-    padding: 12px;
-    font-size: 6px;
-    margin-left: 10%;
-
-  }
-
-  .action-text h1 {
-    font-size: 13px;
-  }
-
-  .action-text p {
-    font-size: 9px;
   }
 
   .image-container img {
     width: 200px;
-    height:200px;
+    height: 250px;
     object-fit: cover;
   }
 
-  footer {
-    padding: 20px 15px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
-    width: 100%;
+  .shadow {
+    height: 250px;
+    max-width: 100px;
+    transform: translatex(-70%);
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
   }
 
-  footer > * {
-    width: auto;             /* Hindari width 100% agar bisa di-center */
-    margin: 5px 0;           /* Opsional: spasi antar elemen */
+  .shadow2 {
+    height: 250px;
+    max-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    background: linear-gradient(to right, rgb(33, 196, 101), rgba(33, 196, 100, 1));
+    position: absolute;
+  }
+
+  .action-text {
+    height: 250px;
+    width: 100%;
+    max-width: 240px;
+    margin: 0;
+    padding: 10px;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .action-text h1 {
+    font-size: 17px;
+
+  }
+
+  .action-text p {
+    font-size: 10px;
+
   }
 
   .footerNavbar {
     display: none;
   }
 
-  .footer-content {
-    padding: 20px 15px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
-    width: 100%;
-  }
-
-  .footer-brand {
-    position: relative;
-  }
-
-  .footer-brand p {
-    font-size: 12px;
-    margin-bottom: 20px;
-
-    margin-left: 0;
-  }
-
-  .footer-links{
-    font-size: 15px;
-  }
-
-  .footer-links ul {
-    display: flex;
-
-  }
-
-}
-
-/* Responsive untuk layar dengan lebar maksimum 360px */
-@media (max-width: 360px) {
-
-
-
-  /* Header */
-  header {
-    padding: 10px;
-  }
-
-  .logo img {
-    width: 30px;
-    margin-left: 0;
-  }
-
-  nav a {
-    font-size: 13px;
-    margin: 5px 8px;
-  }
-
-  .hero {
-    padding: 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 13px;
-  }
-
-  .btn-coba {
-    width: 100%;
-    padding: 12px 0;
-  }
-
-  .why-section {
-    padding: 30px 10px;
-  }
-
-  .why-container {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .why-text {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .why-image img {
-    max-width: 100%;
-  }
-
-  .fitur {
-    padding: 40px 10px;
-  }
-
-  .fitur-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .fitur-card {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .action {
-    grid-template-columns: 1fr;
-  }
-
-  .action-text {
-    padding: 20px;
-    margin-left: 0;
-    width: 100%;
-    clip-path: none;
-  }
-
-  .cta-btn {
-    width: 100%;
-    padding: 10px;
+  .action .btn-coba {
+    width: 80%;
+    font-size: 8px;
   }
 
   footer {
-    padding: 15px;
-  }
-
-  .footer-links ul {
-    grid-template-columns: 1fr;
-  }
-
-  .footerNavbar ul {
+    width: 100%;
+    padding: 0;
     flex-direction: column;
+    height: auto;
+
+  }
+
+  .footer-content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+
+  }
+
+  .footer-brand {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-brand p {
+    font-size: 10px;
+  }
+
+  .footer-brand img {
+    transform: scale(0.7);
+    margin-left: 0;
+  }
+
+  .footer-links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .footer-links h4 {
+    margin: 0;
+  }
+
+  .footer-links  img {
+    transform: scale(0.8);
+  }
+
+  .credit {
+    font-size: 11px;
   }
 }
