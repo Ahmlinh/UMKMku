@@ -438,6 +438,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .footer-brand img {
