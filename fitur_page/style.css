@@ -107,7 +107,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(20px);
     transition: all 0.6s ease-out;
   }
 
@@ -128,7 +128,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-20px);
     transition: all 0.6s ease-out;
   }
 
@@ -139,7 +139,7 @@
 
   .fitur-content_genap   .fitur-text {
     flex: 1;
-    min-width: 300px;
+    max-width: 300px;
     font-family: "montserrat",sans-serif;
     text-align: left;
 
@@ -147,7 +147,15 @@
 
   .fitur-text {
     flex: 1;
-    min-width: 300px;
+    max-width: 300px;
+    font-family: "montserrat",sans-serif;
+    text-align: right;
+
+  }
+
+  .fitur-content_genap .fitur-text {
+    flex: 1;
+    max-width: 300px;
     font-family: "montserrat",sans-serif;
     text-align: right;
 
@@ -177,11 +185,23 @@
   
   .fitur-img {
     flex: 1;
-    min-width: 300px;
+    max-width: 300px;
     text-align: center;
   }
   
   .fitur-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    transform: scale(1.1);
+  }
+
+  .fitur-content_genap .fitur-img {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .fitur-content_genap .fitur-img img {
     max-width: 100%;
     border-radius: 10px;
     transform: scale(1.1);
@@ -401,62 +421,19 @@ footer {
 color: #4a6c8b;
 }
 
-/* RESPONSIVE UNTUK TABLET & HP */
-@media (max-width: 1024px) {
-  footer {
-    padding: 30px 40px;
-    height: auto;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-brand {
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .footer-brand p {
-    width: 100%;
-  }
-
-  .footer-links {
-    margin: 0;
-    align-items: center;
-  }
-
-  .footer-links ul {
-    grid-template-columns: repeat(3, 1fr); /* dari 5 ke 3 kolom */
-    justify-items: center;
-  }
-
-  .footerNavbar {
-    width: 100%;
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  .footerNavbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footerNavbar ul li {
-    margin: 5px 10px;
-  }
+.hiden {
+  display: none;
+  font-family: "montserrat",sans-serif;
 }
 
-@media (max-width: 600px) {
-
+/* RESPONSIVE UNTUK TABLET & HP */
+/* Responsive untuk layar dengan lebar maksimum 800px */
+@media (max-width:600px) {
   header {
-    display: none;
     width: 100%;
-    padding: 15px 15px 10px 0;  
-
-
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
   }
 
   .hidden {
@@ -464,138 +441,268 @@ color: #4a6c8b;
   }
 
   .menuicon {
-    display: flex;
+    display: inline;
+    cursor: pointer;
   }
 
   .logo img {
-    margin-left: 0;
     transform: scale(1);
-    margin-left: 20px;
+    margin: 0;
   }
 
-  nav a {
-    font-size: 14px;
-    margin: 8px 10px;
+  .menunavbar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: #22c55edc;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 40px;
+    right: -250px;
+    font-weight: 600;
   }
 
-
-
-  .action {
+  .overlay {
+    position: fixed;
     display: none;
-    height: auto;
     width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
   }
 
-  .action-text {
-    padding: 30px;
-    margin-left: -55px;
-    width: 100%;
-    clip-path: none;
-    height: 200px;
-    
+  .overlay.show {
+    display: block;
   }
 
-  .action-text h1 {
-    font-size: 20px;
-    margin-left: 20px;
+  .menunavbar.open {
+    right: 0;
   }
 
-  .action-text p {
+  .menunavbar  img {
+    filter: brightness(0) invert(1);
+    transform: translate(165px, -47px);
+  }
+
+  .menunavbar .iconmenu {
+    cursor: pointer;
+    position: relative;
+
+  }
+
+  .menunavbar .daftarmenu {
+    text-decoration: none;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+
+  .menunavbar .btn-daftar {
+    width: 70%;
     font-size: 12px;
-    margin-left: 20px;
-
+    font-weight: bolder;
   }
 
-  .shadow {
-    display: flex;
-    width: 200px;
-    height:200px;
-    object-fit: cover;
-    transform: translateX(90px);
-    background: linear-gradient(to right, rgba(33, 196, 100, 0.3), rgb(33, 196, 101));
-    opacity: 1;
+  .fitur {
+    padding: 20px 20px;
   }
 
-  .shadow2{
-    display: flex;
-    width: 200px;
-    background: linear-gradient(to right, rgba(33, 196, 100, 0.4), rgba(33, 196, 100, 1));
-    height:200px;
-    object-fit: cover;
-    transform: translateX(-10px);
+  .fitur-title {
+    font-size: 30px;
   }
 
-  .action-text .btn-coba {
-    width: 60%;
-    padding: 12px;
-    font-size: 6px;
-    margin-left: 10%;
-
+  .fitur-img {
+    max-width: 200px;
   }
 
-  .action-text h1 {
+  .fitur-img img{
+    width: 100%;
+  }
+
+
+  .fitur-subtitle {
     font-size: 13px;
   }
 
-  .action-text p {
-    font-size: 9px;
+  .fitur-content {
+    display: flex;
+    gap: 0;
+  }
+
+  .fitur-content_genap {
+    display: flex;
+    gap: 0;
+  }
+  
+
+  .hiden {
+    display: block;
+    font-size: 10px;
+    margin-top: 10px;
+    line-height: 1.5;
+    width: 90%;
+  }
+
+  .hiden .btn-coba {
+    width: 40%;
+    margin-top: 15px;
+  }
+
+  .fitur-text {
+    width: 50%;
+  }
+
+  .fitur-content_genap .fitur-text {
+    width: 50%;
+  }
+
+  .fitur-text h3{
+    width: 100%;
+    text-align: right;
+  }
+
+  .fitur-content_genap .fitur-text h3{
+    width: 100%;
+    text-align: left;
+  }
+
+  .fitur-text p, .fitur-text a{
+    display: none;
+  }
+/*
+  .hiden {
+    display: flex;
+    flex-direction: column;
+  } */
+
+
+  .action {
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    height: auto;
   }
 
   .image-container img {
-    width: 200px;
-    height:200px;
+    width: 220px;
+    height: 250px;
     object-fit: cover;
   }
 
-  footer {
-    padding: 20px 15px;
-    height: auto;
-    display: none;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
-    width: 100%;
+  .shadow {
+    height: 250px;
+    max-width: 100px;
+    transform: translatex(-70%);
+    left: 50%;
+    object-fit: cover;
+    position: absolute;
   }
 
-  footer > * {
-    width: auto;             /* Hindari width 100% agar bisa di-center */
-    margin: 5px 0;           /* Opsional: spasi antar elemen */
+  .shadow2 {
+    height: 250px;
+    max-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    background: linear-gradient(to right, rgb(33, 196, 101), rgba(33, 196, 100, 1));
+    position: absolute;
+  }
+
+  .action-text {
+    height: 250px;
+    width: 100%;
+    max-width: 240px;
+    margin: 0;
+    padding: 10px;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .action-text h1 {
+    font-size: 17px;
+
+  }
+
+  .action-text p {
+    font-size: 10px;
+
   }
 
   .footerNavbar {
     display: none;
   }
 
-  .footer-content {
-    padding: 20px 15px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* Center horizontal */
-    justify-content: center; /* Center vertical (jika ingin) */
-    text-align: center;
+  .action .btn-coba {
+    width: 80%;
+    font-size: 8px;
+  }
+
+  footer {
     width: 100%;
+    padding: 0;
+    flex-direction: column;
+    height: auto;
+
+  }
+
+  .footer-content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+
   }
 
   .footer-brand {
-    position: relative;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-brand p {
+    font-size: 10px;
   }
 
-  .footer-brand p {
-    font-size: 12px;
-    margin-bottom: 20px;
-
+  .footer-brand img {
+    transform: scale(0.7);
     margin-left: 0;
   }
 
-  .footer-links{
-    font-size: 15px;
+  .footer-links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .footer-links h4 {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .footer-links  img {
+    transform: scale(0.7);
   }
 
   .footer-links ul {
-    display: flex;
-
+    gap: 5px;
   }
 
+  .credit {
+    font-size: 11px;
+  }
 }
+
