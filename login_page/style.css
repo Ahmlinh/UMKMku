@@ -69,12 +69,28 @@
     filter: brightness(1.1);
     color: white;
   }
-  
+
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Isi ruang kosong agar footer terdorong ke bawah */
+}
+
+
 /* login */
 
 .bodypage {
   background-color: #f2f2f2;
-  height: 800px;
+  height: auto;
+
 }
 
 .container {
@@ -82,7 +98,7 @@
   justify-content: center;
   
   background-color: #f2f2f2;
-  height: auto;
+  height: 100%;
 
   
 }
@@ -275,4 +291,98 @@ footer {
 
 .footerNavbar ul li a:hover {
 color: #4a6c8b;
+}
+
+@media (max-width:600px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+
+
+  .hidden {
+    display: none;
+  }
+
+  .menuicon {
+    display: inline;
+    cursor: pointer;
+  }
+
+  .logo img {
+    transform: scale(1);
+    margin: 0;
+  }
+
+  .bodypage {
+    justify-content: center;
+    height: auto;
+    display: flex;
+  }
+  
+
+  .container {
+    width: 90%;
+    height: 100%;
+  }
+
+  footer {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-links {
+    margin: 10px 0;
+  }
+
+  .footer-brand p {
+    font-size: 10px;
+  }
+
+  .footer-brand img {
+    transform: scale(0.7);
+    margin-left: 0;
+  }
+
+  .footer-links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .footer-links h4 {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .footer-links  img {
+    transform: scale(0.7);
+  }
+
+  .footer-links ul {
+    gap: 5px;
+  }
+
+  .credit {
+    font-size: 11px;
+  }
+
+  .footerNavbar {
+    display: none
+  }
 }
