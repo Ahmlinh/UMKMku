@@ -13,3 +13,12 @@ document.querySelectorAll('.benefit-card').forEach((el) => {
   benefit.observe(el);
 });
 
+function openSidebar() {
+  document.getElementById("menunavbar").classList.add("open");
+  document.getElementById("overlay").classList.add("show");
+}
+
+function closesidebar() {
+  document.getElementById("menunavbar").classList.remove("open");
+  document.getElementById("overlay").classList.remove("show");
+}
